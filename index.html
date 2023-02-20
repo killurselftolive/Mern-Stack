@@ -1,139 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>TO DO LIST</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>4 UR PAGE</title>
 </head>
-<body>
-	<div id="container">
-		<div id="title">TO-DO List</div>
-		<div id="main-cont">
-			<div id="search-cont">
-				<input type="text" placeholder="Enter a new task..." />
-				<button onclick="addItem(this)">Add</button>
-			</div>
-			<div id="list-cont">
-			</div>
-		</div>
-	</div>
-
-	<style type="text/css">
-		*,
-		*::before,
-		*::after{
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-		body{
-			padding: 45px;
-		}
-		#title{
-			font-weight: 700;
-			font-size: 28px;
-			margin-bottom: 18px;
-		}
-		#main-cont{
-			display: flex;
-			flex-direction: column;
-			height: 100%;
-			width: 100%;
-			align-items: center;
-		}
-		#search-cont{
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			height: 45px;
-			width: 60%;
-			max-width: 950px;
-			min-width: 350px;
-		}
-		#search-cont input{
-			height: 100%;
-			width: calc(100% - 85px);
-			font-size: 18px;
-			border-radius: 5px;
-			border: 2px solid #AAA;
-			padding-left: 8px;
-		}
-		#search-cont input:focus{
-			border: 2px solid #AAA;
-			outline: 0;
-		}
-		#search-cont button{
-			height: 100%;
-			width: 75px;
-			background-color: #0A0;
-			border: 0;
-			color: #FFF;
-			border-radius: 5px;
-			font-size: 21px;
-			cursor: pointer;
-		}
-		#list-cont{
-			width: 100%;
-			margin-top: 15px;
-		}
-		.list-item{
-			display: flex;
-			justify-content: space-between;
-			background-color: #DFDFDF;
-			border-radius: 5px;
-			padding: 10px 16px;
-			margin: 8px 5px;
-			box-shadow: rgba(180, 180, 180, 0.3) 0px 0px 0px 2px,
-						rgb(209, 213, 219) 0px 0px 0px 1px inset;
-		}
-		.list-item .text{
-			font-size: 24px;
-			font-family: sans-serif;
-			padding: 5px;
-		}
-		.list-item button{
-			font-size: 19px;
-			font-family: sans-serif;
-			padding: 8px 18px;
-			background-color: #F00;
-			color: #FFF;
-			border: 0;
-			border-radius: 5px;
-			cursor: pointer;
-		}
-
-	</style>
-	<script type="text/javascript">
-		let toDoList = ["a", "b", "c", "d", "e", "imen"];
-
-		const listElem = (el, i) => {
-			return `
-				<div class="list-item">
-					<div class="text">${el}</div>
-					<button onclick="deleteItem(${i})">Delete</button>
-				</div>`;
-		}
-
-		const renderList = () => {
-			document.getElementById("list-cont").innerHTML = ""; 
-			toDoList.forEach((el, i) => {
-				document.getElementById("list-cont").innerHTML += listElem(el, i);
-			});
-			console.log(toDoList);
-		}
-		renderList();
-
-		const addItem = (elem) => {
-			toDoList.push(elem.previousElementSibling.value);
-			elem.previousElementSibling.value = "";
-			renderList();
-		}
-
-		const deleteItem = (i) => {
-			toDoList.splice(i,1);
-			renderList();
-		}
-	</script>
-
-
-
+<body style="margin:auto; display: flex;flex-direction: column;text-align: center; justify-content: center;align-items: center;width: 80%;height: 100%;">
+    <h1>HEADING TITLE</h1>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique in eos ratione ea, at ut ducimus facilis doloribus maiores numquam mollitia laboriosam illo molestias inventore explicabo hic saepe! Recusandae, voluptates.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique in eos ratione ea, at ut ducimus facilis doloribus maiores numquam mollitia laboriosam illo molestias inventore explicabo hic saepe! Recusandae, voluptates.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique in eos ratione ea, at ut ducimus facilis doloribus maiores numquam mollitia laboriosam illo molestias inventore explicabo hic saepe! Recusandae, voluptates.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique in eos ratione ea, at ut ducimus facilis doloribus maiores numquam mollitia laboriosam illo molestias inventore explicabo hic saepe! Recusandae, voluptates.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique in eos ratione ea, at ut ducimus facilis doloribus maiores numquam mollitia laboriosam illo molestias inventore explicabo hic saepe! Recusandae, voluptates.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique in eos ratione ea, at ut ducimus facilis doloribus maiores numquam mollitia laboriosam illo molestias inventore explicabo hic saepe! Recusandae, voluptates.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique in eos ratione ea, at ut ducimus facilis doloribus maiores numquam mollitia laboriosam illo molestias inventore explicabo hic saepe! Recusandae, voluptates.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique in eos ratione ea, at ut ducimus facilis doloribus maiores numquam mollitia laboriosam illo molestias inventore explicabo hic saepe! Recusandae, voluptates.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique in eos ratione ea, at ut ducimus facilis doloribus maiores numquam mollitia laboriosam illo molestias inventore explicabo hic saepe! Recusandae, voluptates.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique in eos ratione ea, at ut ducimus facilis doloribus maiores numquam mollitia laboriosam illo molestias inventore explicabo hic saepe! Recusandae, voluptates.
+    
+    </p>
+    <br />
+    <br />
+    <img src="./_.png" />
+    <br />
+    <br />
+    <a href="www.google.com">google</a>
+    
 </body>
 </html>
